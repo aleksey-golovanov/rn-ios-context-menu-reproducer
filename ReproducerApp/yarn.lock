@@ -3016,6 +3016,7 @@ __metadata:
     react: 18.2.0
     react-native: 0.74.2
     react-test-renderer: 18.2.0
+    rtn-context-menu: ../RTNContextMenu
     typescript: 5.0.4
   languageName: unknown
   linkType: soft
@@ -8320,6 +8321,16 @@ __metadata:
   bin:
     rimraf: ./bin.js
   checksum: 3ea587b981a19016297edb96d1ffe48af7e6af69660e3b371dbfc73722a73a0b0e9be5c88089fbeeb866c389c1098e07f64929c7414290504b855f54f901ab10
+  languageName: node
+  linkType: hard
+
+"rtn-context-menu@file:../RTNContextMenu::locator=ReproducerApp%40workspace%3A.":
+  version: 0.0.1
+  resolution: "rtn-context-menu@file:../RTNContextMenu#../RTNContextMenu::hash=646955&locator=ReproducerApp%40workspace%3A."
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 977533e9cbe91691ad6a4bb33ce81aa36251addaacf4eb648ba87d7d2b595f3f9351e1f7616df1defeca6c03bd4b2c2fefe3c438af3951806f0853ffd4a186a5
   languageName: node
   linkType: hard
 
