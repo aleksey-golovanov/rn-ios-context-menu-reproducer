@@ -13,7 +13,6 @@ using namespace facebook::react;
 @end
 
 @implementation RTNContextMenu {
-  UIView *_view;
 }
 
 + (ComponentDescriptorProvider)componentDescriptorProvider
@@ -26,17 +25,13 @@ using namespace facebook::react;
   if (self = [super initWithFrame:frame]) {
     static const auto defaultProps = std::make_shared<const RTNContextMenuProps>();
     _props = defaultProps;
-
-    _view = [[UIView alloc] init];
-      
-    if (@available(iOS 13.0, *)) {
-        UIContextMenuInteraction* contextInteraction = [[UIContextMenuInteraction alloc] initWithDelegate:self];
-        [_view addInteraction:contextInteraction];
-    }
-
-    self.contentView = _view;
   }
-    
+
+  if (@available(iOS 13.0, *)) {
+    UIContextMenuInteraction* contextInteraction = [[UIContextMenuInteraction alloc] initWithDelegate:self];
+    [self addInteraction:contextInteraction];
+  }
+
   return self;
 }
 
@@ -45,7 +40,6 @@ using namespace facebook::react;
         UIAction *share = [UIAction actionWithTitle:@"test" image:[UIImage systemImageNamed:@"square.and.arrow.up"] identifier:nil handler:^(__kindof UIAction * _Nonnull action) {
             // empty
         }];
-
         
         return [UIMenu menuWithTitle:@"test" children:@[share]];
     }];
