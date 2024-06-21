@@ -6,11 +6,11 @@ import ContextMenuView from 'rtn-context-menu/js/RTNContextMenuNativeComponent';
 function App(): React.JSX.Element {
   return (
     <SafeAreaView>
-      <ContextMenuView>
-        <View style={styles.view}>
+      <View>
+        <ContextMenuView style={styles.view}>
           <Text>text</Text>
-        </View>
-      </ContextMenuView>
+        </ContextMenuView>
+      </View>
     </SafeAreaView>
   );
 }
